@@ -14,6 +14,6 @@ banner = ("######################################\n"
 print(banner)
 print("")
 print('[+] Your HWID: ' + str(binascii.hexlify(hwid).upper())[::-1])
-pyperclip.copy(str(hwid)[::-1])
+pyperclip.copy(str(binascii.hexlify(hwid).upper())[::-1])
 print('[+] HWID Set to Clipbaord')
 raw_input("")
