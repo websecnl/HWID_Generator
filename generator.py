@@ -6,16 +6,14 @@ import socket
 mac = get_mac()
 license = (str(mac) + '-' + str(socket.gethostname()))
 
-
 hwid = base64.b64encode(license)
 
-print("##################")
-print("# HWID Generator #")
-print("##################")
+banner = ("######################################\n"
+          "## HWID GENERATOR - BY JOEL A. OSSI ##\n"
+          "######################################")
+print(banner)
 print("")
 print('[+] Your HWID: ' + str(binascii.hexlify(hwid).upper())[::-1])
 pyperclip.copy(str(hwid)[::-1])
 print('[+] HWID Set to Clipbaord')
-print("")
-print("Coded By Joel Aviad Ossi")
 raw_input("")
